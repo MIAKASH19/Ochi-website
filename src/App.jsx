@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Navbar from "./components/Navbar"
 
 function App() {
   return (
-    <div className='app'>
-        <h1 className='text-red-500'>Hello World</h1>
+    <div className="w-full h-screen">
+      <Navbar />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
