@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar"
 import Landing from "./components/Landing";
 import Marque from "./components/Marque";
+import About from "./components/About";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Navbar />
       <Landing />
       <Marque />
+      <About />
     </div>
   );
 }

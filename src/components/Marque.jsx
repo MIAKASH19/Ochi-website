@@ -8,24 +8,24 @@ export default function Marque() {
         <motion.h1
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
-          transition={{ ease: "linear", repeat: Infinity, duration: 5 }}
-          className="text-[25vw] -mb-4 -mt-12 text-white font-founder uppercase leading-none"
+          transition={{ ease: "linear", repeat: Infinity, duration: 10 }}
+          className="text-[25vw] -mb-[.5vw] -mt-[3vw] text-white font-founder uppercase leading-none"
+        >
+          We are ochi
+        </motion.h1> 
+        <motion.h1
+          initial={{ x: 0 }}
+          animate={{ x: "-100%" }}
+          transition={{ ease: "linear", repeat: Infinity, duration: 10 }}
+          className="text-[25vw] -mb-[.5vw] -mt-[3vw] text-white font-founder uppercase leading-none"
         >
           We are ochi
         </motion.h1>
         <motion.h1
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
-          transition={{ ease: "linear", repeat: Infinity, duration: 5 }}
-          className="text-[25vw] -mb-4 -mt-12 text-white font-founder uppercase leading-none"
-        >
-          We are ochi
-        </motion.h1>
-        <motion.h1
-          initial={{ x: 0 }}
-          animate={{ x: "-100%" }}
-          transition={{ ease: "linear", repeat: Infinity, duration: 5 }}
-          className="text-[25vw] -mb-4 -mt-12 text-white font-founder uppercase leading-none"
+          transition={{ ease: "linear", repeat: Infinity, duration: 10 }}
+          className="text-[2vw] -mb-[.5vw] -mt-[3vw] text-white font-founder uppercase leading-none"
         >
           We are ochi
         </motion.h1>
