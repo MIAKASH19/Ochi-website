@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar"
 import Landing from "./components/Landing";
 import Marque from "./components/Marque";
 import About from "./components/About";
+import EyePlay from "./components/EyePlay";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Landing />
       <Marque />
       <About />
+      <EyePlay />
     </div>
   );
 }
