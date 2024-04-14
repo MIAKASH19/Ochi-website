@@ -4,6 +4,8 @@ import Landing from "./components/Landing";
 import Marque from "./components/Marque";
 import About from "./components/About";
 import EyePlay from "./components/EyePlay";
+import Featured from "./components/Featured";
+import Cards from "./components/Cards";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Marque />
       <About />
       <EyePlay />
+      <Featured />
+      <Cards />
     </div>
   );
 }
