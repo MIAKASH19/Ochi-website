@@ -4,6 +4,7 @@ import Landing from "./components/Landing";
 import Marque from "./components/Marque";
 import About from "./components/About";
 import EyePlay from "./components/EyePlay";
+import EyePlay2 from "./components/EyePlay2";
 import Featured from "./components/Featured";
 import Cards from "./components/Cards";
 
@@ -17,6 +18,7 @@ function App() {
       <EyePlay />
       <Featured />
       <Cards />
+      <EyePlay2 />
     </div>
   );
 }
