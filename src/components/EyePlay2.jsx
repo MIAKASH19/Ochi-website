@@ -36,7 +36,7 @@ const EyePlay2 = () => {
       </div>
       <div className="absolute flex gap-20 top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]">
         <div className="w-[13vw] flex items-center justify-center h-[13vw] bg-zinc-100 rounded-full">
-          <div className="w-2/3 bg-black h-2/3 rounded-full relative">
+          <div className="w-2/3 bg-black h-2/3 rounded-full relative ">
             <div
               style={{
                 transform: `translate(-50%, -50%) rotate(${rotate}deg)`,

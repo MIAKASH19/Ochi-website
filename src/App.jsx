@@ -7,6 +7,7 @@ import EyePlay from "./components/EyePlay";
 import EyePlay2 from "./components/EyePlay2";
 import Featured from "./components/Featured";
 import Cards from "./components/Cards";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Featured />
       <Cards />
       <EyePlay2 />
+      <Footer />
     </div>
   );
 }
