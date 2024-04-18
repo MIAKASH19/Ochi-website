@@ -2,13 +2,13 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="w-full bg-[#F1F1F1] h-[110vh] flex">
-      <div className="w-1/2  h-full font-founder  px-10 py-3 uppercase flex flex-col justify-between">
+    <div className="w-full bg-[#F1F1F1] h-[120vh] flex pt-20">
+      <div className="w-1/2  h-full font-founder  px-10 pt-3 uppercase flex flex-col justify-between">
         <div>
           <h1 className="text-[10vw] text-[#212121] leading-[8vw]">Eye-</h1>
           <h1 className="text-[10vw] text-[#212121] leading-[8vw]">Opening</h1>
         </div>
-        <div className="mb-3">
+        <div className="">
           <svg
             width="72"
             height="30"

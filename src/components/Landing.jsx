@@ -1,9 +1,10 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
 
-const Landing = () => {
+const  Landing = () => {
   return (
-    <div className="text-white bg-zinc-900 w-full h-screen pt-1 font-neue">
+    <div data-scroll data-scroll-section data-scroll-speed="-.2" className="text-white bg-zinc-900 w-full h-screen pt-1 font-neue">
       <div className="textstructure mt-36 px-10">
         {["we create", "eye-opening", "presentations"].map(
           (masktext, index) => {
@@ -11,9 +12,18 @@ const Landing = () => {
               <div key={index} className="masker">
                 <div className="w-fit flex items-center">
                   {index === 1 && (
-                    <div className="w-[10vw] bg-green-500 h-[6vw] relative top-[.5vw] mr-[1vw] rounded-md overflow-hidden object-contain">
-                      <img src="https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg" alt="ochi_image" className="w-full h-full bg-cover" />
-                    </div>
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{width: "10vw"}}
+                      transition={{ease: [0.76, 0, 0.24, 1], delay: 0.8, duration: 0.7}}
+                      className="w-[10vw] bg-green-500 h-[6vw] relative top-[.5vw] mr-[1vw] rounded-md overflow-hidden object-contain"
+                    >
+                      <img
+                        src="https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg"
+                        alt="ochi_image"
+                        className="w-full h-full bg-cover"
+                      />
+                    </motion.div>
                   )}
                   <h1 className="font-founder font-semibold text-[9vw] uppercase leading-[7.3vw]">
                     {masktext}
