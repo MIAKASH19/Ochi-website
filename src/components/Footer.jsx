@@ -63,7 +63,7 @@ const Footer = () => {
               <h3>E:</h3>
               <a href="#">mszharul1990@gmail.com</a>
             </div>
-            <h4 className="text-[#999999] absolute sm:bottom-3 bottom-10">
+            <h4 className="text-[#999999] absolute sm:bottom-10 bottom-10">
               ©All Rights Reserved To Ochi Design
             </h4>
           </div>
@@ -76,7 +76,7 @@ const Footer = () => {
               <a href="#">About Us</a>
               <a href="#">Contact Us</a>
             </div>
-            <h4 className="text-[#999999] absolute bottom-3">
+            <h4 className="text-[#999999] absolute bottom-10">
               Website by MI AKASH
             </h4>
           </div>

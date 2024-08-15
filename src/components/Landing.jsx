@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
+import { useMediaQuery } from "react-responsive";
 
 const Landing = () => {
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 640px)" });
+
   return (
     <div
       data-scroll
@@ -18,7 +21,7 @@ const Landing = () => {
                 {index === 1 && (
                   <motion.div
                     initial={{ width: 0 }}
-                    animate={{ width: "18vw" }}
+                    animate={{ width: isSmallScreen ? "18vw" : "10vw" }}
                     transition={{
                       ease: [0.76, 0, 0.24, 1],
                       delay: 0.8,
