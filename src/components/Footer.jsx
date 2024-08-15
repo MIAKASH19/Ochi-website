@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="w-full bg-[#F1F1F1] h-[120vh] flex pt-20">
-      <div className="w-1/2  h-full font-founder  px-10 pt-3 uppercase flex flex-col justify-between">
+    <div className="w-full bg-[#F1F1F1] h-[120vh] flex pt-20 pb-10 flex-col sm:flex-row ">
+      <div className="sm:w-1/2 w-full h-full font-founder px-5 sm:px-10 pt-3 uppercase flex sm:flex-col flex-row justify-between">
         <div>
           <h1 className="text-[10vw] text-[#212121] leading-[8vw]">Eye-</h1>
           <h1 className="text-[10vw] text-[#212121] leading-[8vw]">Opening</h1>
@@ -39,11 +39,11 @@ const Footer = () => {
           </svg>
         </div>
       </div>
-      <div className="w-1/2 bg-[#F1F1F1] h-full font-founder">
+      <div className="sm:w-1/2 w-full bg-[#F1F1F1] h-full font-founder  px-5 sm:px-0">
         <h1 className="text-[10vw] leading-[8vw] uppercase text-[#212121] py-3">
           Presentations
         </h1>
-        <div className="flex">
+        <div className="flex gap-8 sm:gap-0">
           <div className="w-2/3 text-[#555555] relative h-[90vh] font-neue">
             <div className="flex flex-col capitalize underline mb-10 pt-5">
               <h3>S:</h3>
@@ -63,11 +63,11 @@ const Footer = () => {
               <h3>E:</h3>
               <a href="#">mszharul1990@gmail.com</a>
             </div>
-            <h4 className="text-[#999999] absolute bottom-3">
+            <h4 className="text-[#999999] absolute sm:bottom-3 bottom-10">
               ©All Rights Reserved To Ochi Design
             </h4>
           </div>
-          <div className=" w-1/3 font-neue flex items-center relative text-[#555555]">
+          <div className=" sm:w-1/3 w-full font-neue flex items-center  relative text-[#555555]">
             <div className="flex flex-col capitalize underline ">
               <h3>M:</h3>
               <a href="#">Home</a>

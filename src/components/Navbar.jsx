@@ -1,8 +1,51 @@
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
+import { Squeeze as Hamburger } from "hamburger-react";
 
 function Navbar() {
+  const [screenSize, setScreenSize] = useState(undefined);
+  const [showNavBtn, setShowNavBtn] = useState(false);
+  const [scrollDirection, setScrollDirection] = useState("up");
+
+  const handleResize = useCallback(() => {
+    setScreenSize(window.innerWidth);
+  }, [setScreenSize]);
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [handleResize]);
+
+  useEffect(() => {
+    const shouldShowNavBtn = screenSize <= 900;
+    setShowNavBtn(shouldShowNavBtn);
+  }, [screenSize]);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        setScrollDirection("down");
+      } else {
+        setScrollDirection("up");
+      }
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="flex justify-between items-center px-10 py-5 w-full fixed z-[99] font-neue">
+    <div className={`flex justify-between items-center px-6 sm:px-10 py-4 sm:py-5 w-full fixed z-[99]  font-neue bg-transparent backdrop-blur-sm bg-opacity-70 ${scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"}`}>
       <div className="logo">
         <svg
           width="72"
@@ -33,22 +76,25 @@ function Navbar() {
           ></path>
         </svg>
       </div>
-      <div className="links gap-4 flex">
-        {["Services", "Our Work", "Insights", "About Us", "Contact Us"].map(
-          (link, index) => (
-            <a
-            
-              href="#"
-              key={index}
-              className={`text-white font-medium text-md ${
-                index === 4 && "ml-32"
-              }`}
-            >
-              {link}
-            </a>
-          )
-        )}
-      </div>
+      {showNavBtn ? (
+        <Hamburger size={28} color="#fff" />
+      ) : (
+        <div className="links gap-6 flex items-center">
+          {["Services", "Our Work", "Insights", "About Us", "Contact Us"].map(
+            (link, index) => (
+              <a
+                href="#"
+                key={index}
+                className={`text-white font-DM font-medium text-sm sm:text-md ${
+                  index === 4 && "ml-20 sm:ml-32"
+                }`}
+              >
+                {link}
+              </a>
+            )
+          )}
+        </div>
+      )}
     </div>
   );
 }

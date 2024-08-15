@@ -1,13 +1,40 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
 
 const Landing = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const divRef = useRef(null);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth < 640); // Define small screen as below 640px
+    };
+
+    checkScreenSize(); // Initial check
+    window.addEventListener("resize", checkScreenSize); // Add resize listener
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize); // Cleanup listener
+    };
+  }, []);
+
+  useEffect(() => {
+    if (divRef.current) {
+      if (isSmallScreen) {
+        divRef.current.setAttribute("data-scroll", true);
+        divRef.current.setAttribute("data-scroll-section", true);
+        divRef.current.setAttribute("data-scroll-speed", "-.2");
+      } else {
+        divRef.current.removeAttribute("data-scroll");
+        divRef.current.removeAttribute("data-scroll-section");
+        divRef.current.removeAttribute("data-scroll-speed");
+      }
+    }
+  }, [isSmallScreen]);
   return (
     <div
-      data-scroll
-      data-scroll-section
-      data-scroll-speed="-.2"
+    ref={divRef}
       className="text-white bg-zinc-900 w-full h-screen pt-10 font-neue"
     >
       <div className="textstructure mt-20 sm:mt-36 px-6 sm:px-10">

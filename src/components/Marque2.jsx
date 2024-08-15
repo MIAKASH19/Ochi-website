@@ -2,10 +2,23 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Marque() {
-  
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth < 640); 
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
+  }, []);
   return (
     <div data-scroll data-scroll-section data-scroll-speed=".01" className="w-full sm:py-10 py-4 bg-[#004D43] overflow-hidden rounded-tl-3xl rounded-tr-3xl">
-      <div className="text flex items-center border-t-[1px] border-zinc-400 border-b-[1px] whitespace-nowrap">
+      <div className="text flex border-t-[1px] border-zinc-400 border-b-[1px] whitespace-nowrap">
         <motion.h1
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
