@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
 import Marque from "./components/Marque";
 import About from "./components/About";
-import About2 from "./components/About2";
 import EyePlay from "./components/EyePlay";
 import EyePlay2 from "./components/EyePlay2";
 import Featured from "./components/Featured";

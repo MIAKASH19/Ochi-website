@@ -48,7 +48,7 @@ const EyePlay2 = () => {
         <div
           data-scroll
           data-scroll-speed=".5"
-          className="sm:absolute fixed flex gap-10 sm:gap-16 lg:gap-20 top-1/5 sm:top-10 sm:left-1.2 left-1/5 -translate-x-1/2 -translate-y-1/2"
+          className="sm:absolute fixed flex gap-10 sm:gap-16 lg:gap-20 top-1/5 sm:top-[40%] sm:left-1.2 left-1/5 -translate-x-1/2 -translate-y-1/2"
         >
           <div className="w-[20vw] sm:w-[13vw] flex items-center justify-center h-[20vw] sm:h-[13vw] bg-zinc-100 rounded-full">
             <div className="w-2/3 bg-[#222222] h-2/3 rounded-full relative">

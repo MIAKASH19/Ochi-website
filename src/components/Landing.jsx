@@ -11,38 +11,40 @@ const Landing = () => {
       data-scroll
       data-scroll-section
       data-scroll-speed="-.2"
-      className="text-white bg-zinc-900 w-full h-screen pt-10 font-neue"
+      className="text-white bg-zinc-900 w-full h-screen pt-10 font-neue flex flex-col justify-center"
     >
       <div className="textstructure mt-20 sm:mt-36 px-6 sm:px-10">
-        {["we create", "eye-opening", "presentations"].map((masktext, index) => {
-          return (
-            <div key={index} className="masker">
-              <div className="w-fit flex items-center">
-                {index === 1 && (
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: isSmallScreen ? "18vw" : "10vw" }}
-                    transition={{
-                      ease: [0.76, 0, 0.24, 1],
-                      delay: 0.8,
-                      duration: 0.7,
-                    }}
-                    className="w-[18vw] bg-green-500 h-[11vw] sm:h-[6vw] relative top-[1.5vw] sm:top-[.5vw] mr-[2vw] sm:mr-[1vw] rounded-md overflow-hidden object-contain mb-1"
-                  >
-                    <img
-                      src="https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg"
-                      alt="ochi_image"
-                      className="w-full h-full bg-cover"
-                    />
-                  </motion.div>
-                )}
-                <h1 className="font-founder font-semibold text-[17vw] sm:text-[9vw] uppercase leading-[13vw] sm:leading-[7.3vw]">
-                  {masktext}
-                </h1>
+        {["we create", "eye-opening", "presentations"].map(
+          (masktext, index) => {
+            return (
+              <div key={index} className="masker">
+                <div className="w-fit flex items-center">
+                  {index === 1 && (
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: isSmallScreen ? "18vw" : "10vw" }}
+                      transition={{
+                        ease: [0.76, 0, 0.24, 1],
+                        delay: 0.8,
+                        duration: 0.7,
+                      }}
+                      className="w-[18vw] bg-green-500 h-[11vw] sm:h-[6vw] relative top-[1.5vw] sm:top-[.5vw] mr-[2vw] sm:mr-[1vw] rounded-md overflow-hidden object-contain mb-1"
+                    >
+                      <img
+                        src="https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg"
+                        alt="ochi_image"
+                        className="w-full h-full bg-cover"
+                      />
+                    </motion.div>
+                  )}
+                  <h1 className="font-founder font-semibold text-[17vw] sm:text-[9vw] uppercase leading-[13vw] sm:leading-[7.3vw]">
+                    {masktext}
+                  </h1>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          }
+        )}
       </div>
       <div className="border-t-[1px] border-zinc-600 mt-16 sm:mt-20 flex flex-col sm:flex-row justify-between items-start sm:items-center p-6 sm:p-3 sm:px-10 gap-8 sm:gap-0">
         {[
